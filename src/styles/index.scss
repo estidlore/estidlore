@@ -5,4 +5,27 @@ $light: #d0d8e0;
   filter: brightness(0) invert(0.85);
 }
 
+.btn {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s !important;
+  &::after {
+    background-color: rgba($color: $light, $alpha: 0.25);
+    content: "";
+    height: 150%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-300%, -100%) rotate(45deg);
+    transition:  all 0.5s;
+    width: 50%;
+  }
+  &:hover {
+    opacity: 0.75;
+    &::after {
+      transform: translate(200%, 0%) rotate(45deg);
+    }
+  }
+}
+
 @import "/node_modules/bootstrap/scss/bootstrap";
