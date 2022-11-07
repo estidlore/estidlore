@@ -1,10 +1,5 @@
-declare module "*.gif" {
-  const value: any;
-  export = value;
-}
-
 declare module "*.jpg" {
-  const value: any;
+  const value: string;
   export = value;
 }
 
