@@ -1,7 +1,7 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
   moduleNameMapper: {
-    "^[./a-zA-Z0-9_]+\\.png$": "assets/imgs",
+    "^[./a-zA-Z0-9_]+\\.(jpg|png|svg)$": "assets/imgs",
     "assets/(.*)": [
       "assets/$1",
     ],
