@@ -1,6 +1,14 @@
 $dark: #202830;
 $light: #d0d8e0;
 
+a, button, .btn {
+  cursor: url("/src/assets/imgs/CursorPointer.png"), auto !important;
+}
+
+:root {
+  cursor: url("/src/assets/imgs/Cursor.png"), auto !important;
+}
+
 ::-webkit-scrollbar {
   height: 8px;
   width: 8px;
