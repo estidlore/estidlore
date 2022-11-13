@@ -2,14 +2,14 @@ import type { FC } from "react";
 import React from "react";
 
 import { email, github, linkedIn } from "assets/imgs";
+import { Section } from "components/Section";
 
 import { t } from "./lang";
 import { ContactLink } from "./Link";
 
 const Contact: FC = (): JSX.Element => {
   return (
-    <section className={"py-5"} id={"contact"}>
-      <p className={"fs-1 fw-bold mb-4 text-center"}>{t().title}</p>
+    <Section id={"contact"} title={t().title}>
       <div className={"justify-content-center d-flex"}>
         <ContactLink href={"mailto:estidlore@outlook.com"} src={email} />
         <ContactLink href={"https://github.com/estidlore"} src={github} />
@@ -18,7 +18,7 @@ const Contact: FC = (): JSX.Element => {
           src={linkedIn}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

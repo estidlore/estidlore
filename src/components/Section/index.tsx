@@ -1,0 +1,19 @@
+import type { FC } from "react";
+import React from "react";
+
+import type { ISectionProps } from "./types";
+
+const Section: FC<ISectionProps> = ({
+  children,
+  id,
+  title,
+}: ISectionProps): JSX.Element => {
+  return (
+    <section className={"py-5"} id={id}>
+      <p className={"fs-1 fw-bold mb-4 text-center"}>{title}</p>
+      {children}
+    </section>
+  );
+};
+
+export { Section };
