@@ -5,6 +5,11 @@ a, button, .btn {
   cursor: url("/src/assets/imgs/CursorPointer.png"), auto !important;
 }
 
+hr {
+  background-color: $light;
+  opacity: 0.5;
+}
+
 :root {
   cursor: url("/src/assets/imgs/Cursor.png"), auto !important;
 }
@@ -45,6 +50,19 @@ a, button, .btn {
     &::after {
       transform: translate(200%, 0%) rotate(45deg);
     }
+  }
+}
+
+.item {
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba($light, $alpha: 0.25);
+  }
+
+  &.selected {
+    background-color: $light;
+    color: $dark;
   }
 }
 
