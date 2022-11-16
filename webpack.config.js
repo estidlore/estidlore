@@ -43,17 +43,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(ico|png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ]
   },
   output: {
-    path: __dirname + "/dist",
+    path: __dirname + "/build",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      favicon: "src/assets/imgs/favicon.ico",
+      template: "src/index.html",
     }),
   ],
   resolve: {
