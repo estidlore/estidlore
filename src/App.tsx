@@ -4,6 +4,7 @@ import React from "react";
 import { About } from "views/About";
 import { Contact } from "views/Contact";
 import { Header } from "views/Header";
+import { Projects } from "views/Projects";
 import { Work } from "views/Work";
 
 const App: FC = (): JSX.Element => (
@@ -11,6 +12,7 @@ const App: FC = (): JSX.Element => (
     <Header />
     <About />
     <Work />
+    <Projects />
     <Contact />
   </div>
 );
