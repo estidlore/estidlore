@@ -4,9 +4,9 @@ const work: IWork[] = [
   {
     company: "Fluid Attacks",
     description:
-      "UX team's developer for ARM platform. Main responsible of the" +
+      "UX team's developer for ARM platform. Main responsible of the " +
       "platform's storybook development and new designs implementation. " +
-      "Furthermore, designed and contributed to design some features.",
+      "Furthermore, proposed and contributed to design some features.",
     from: {
       month: "Apr",
       year: 2022
@@ -14,6 +14,8 @@ const work: IWork[] = [
     id: "Fluid",
     role: "Security Developer",
     skills: [
+      "ESLint",
+      "Formik",
       "Git",
       "HTML",
       "React-i18next",
@@ -24,7 +26,8 @@ const work: IWork[] = [
       "Styled-components",
       "Tachyons",
       "React-Testing-library",
-      "Typescript"
+      "Typescript",
+      "UI/UX"
     ],
     to: {
       month: "Sep",
@@ -45,13 +48,15 @@ const work: IWork[] = [
     skills: [
       "Bootstrap",
       "React-ChartJs-2",
-      "EmailJs",
+      "EmailJS",
+      "Firebase",
       "Git",
       "Javascript",
       "JSON",
       "JsPDF",
       "React",
-      "Sass"
+      "Sass",
+      "UI/UX"
     ],
     to: {
       month: "Jan",
@@ -61,7 +66,7 @@ const work: IWork[] = [
   {
     company: "Pietrario",
     description:
-      "Lead the UI/UX design and development of Flutter + AR game." +
+      "Lead the UI/UX design and development of Flutter + AR game. " +
       "Author of key features such as the game and shop views design and " +
       "behavior with its corresponding models and controllers logic; " +
       "also the support of multiple languages and dark mode.",
@@ -71,7 +76,7 @@ const work: IWork[] = [
     },
     id: "Pietrario",
     role: "Software developer",
-    skills: ["Agile", "AR", "Dart", "Flutter", "Git", "Java", "MVC"],
+    skills: ["Agile", "AR", "Dart", "Flutter", "Git", "Java", "MVC", "UI/UX"],
     to: {
       month: "Nov",
       year: 2020

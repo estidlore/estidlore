@@ -60,6 +60,14 @@ hr {
     background-color: rgba($light, $alpha: 0.25);
   }
 
+  &:first-child {
+    border-top-left-radius: 4px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 4px;
+  }
+
   &.selected {
     background-color: $light;
     color: $dark;
@@ -90,7 +98,7 @@ hr {
   filter: brightness(0) invert(0.85);
 }
 
-.p {
+section {
   margin: 0 auto;
   max-width: 700px;
 }

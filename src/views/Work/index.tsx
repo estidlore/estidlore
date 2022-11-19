@@ -3,10 +3,11 @@ import { useState } from "react";
 import React from "react";
 
 import { Section } from "components/Section";
+import { Tags } from "components/Tags";
 
 import { t } from "./lang";
 
-const base = "item fw-bold mb-0 px-3 py-2 text-center";
+const base = "item mb-0 px-3 py-2 text-center";
 
 const Work: FC = (): JSX.Element => {
   const [selection, setSelection] = useState(0);
@@ -15,7 +16,7 @@ const Work: FC = (): JSX.Element => {
 
   return (
     <Section
-      className={"align-items-start d-flex p"}
+      className={"align-items-start d-flex"}
       id={"work"}
       title={t().title}
     >
@@ -43,13 +44,7 @@ const Work: FC = (): JSX.Element => {
         </p>
         <p className={"mb-1"}>{work.description}</p>
         <hr />
-        <p className={"mb-0"}>
-          {work.skills.map((el): JSX.Element => (
-            <span className={"d-inline-block me-3"} key={el}>
-              {el}
-            </span>
-          ))}
-        </p>
+        <Tags data={work.skills} />
       </div>
     </Section>
   );

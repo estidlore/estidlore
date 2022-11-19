@@ -9,7 +9,7 @@ import { t } from "./lang";
 const About: FC = (): JSX.Element => {
   return (
     <Section id={"about"} title={t().title}>
-      <p className={"fs-4 p text-center"}>{t().profile}</p>
+      <p className={"fs-4 text-center"}>{t().profile}</p>
       <div className={"chess-piece d-flex justify-content-center mt-5"}>
         <img className={"pawn"} src={pawn} width={128} />
         <img className={"queen position-absolute"} src={queen} width={128} />

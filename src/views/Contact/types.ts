@@ -1,6 +1,6 @@
 interface IContactLinkProps {
-  href?: string;
   src?: string;
+  to: string;
 }
 
 export type { IContactLinkProps };

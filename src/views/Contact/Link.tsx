@@ -1,16 +1,18 @@
 import type { FC } from "react";
 import React from "react";
 
+import { Link } from "components/Link";
+
 import type { IContactLinkProps } from "./types";
 
 const ContactLink: FC<IContactLinkProps> = ({
-  href,
   src,
+  to,
 }): JSX.Element => {
   return (
-    <a className={"btn mx-2"} href={href}>
+    <Link className={"mx-2"} to={to} >
       <img className={"filter-light"} src={src} width={64} />
-    </a>
+    </Link>
   );
 };
 
