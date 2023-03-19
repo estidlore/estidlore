@@ -5,8 +5,11 @@ import React from "react";
 
 import { Link } from ".";
 
-it("renders the work view", () => {
-  render(<Link to={"/"}>{"LinkContent"}</Link>);
+describe("Link", () => {
+  it("renders the work view", () => {
+    expect.assertions(1);
+    render(<Link to={"/"}>{"LinkContent"}</Link>);
 
-  expect(screen.queryByText("LinkContent")).toBeInTheDocument();
+    expect(screen.queryByText("LinkContent")).toBeInTheDocument();
+  });
 });

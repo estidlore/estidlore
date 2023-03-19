@@ -5,9 +5,12 @@ import React from "react";
 
 import { Section } from ".";
 
-it("renders the section component", () => {
-  render(<Section title={"SectionTitle"}>{"SectionContent"}</Section>);
+describe("Section", () => {
+  it("renders the section component", () => {
+    expect.assertions(2);
+    render(<Section title={"SectionTitle"}>{"SectionContent"}</Section>);
 
-  expect(screen.queryByText("SectionTitle")).toBeInTheDocument();
-  expect(screen.queryByText("SectionContent")).toBeInTheDocument();
+    expect(screen.queryByText("SectionTitle")).toBeInTheDocument();
+    expect(screen.queryByText("SectionContent")).toBeInTheDocument();
+  });
 });

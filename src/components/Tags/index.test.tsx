@@ -7,10 +7,13 @@ import { Tags } from ".";
 
 const data = ["TagA", "TagB", "TagC"];
 
-it("renders the tags component", () => {
-  render(<Tags data={data} />);
+describe("Tags", () => {
+  it("renders the tags component", () => {
+    expect.assertions(3); // data.length
+    render(<Tags data={data} />);
 
-  data.forEach((el): void => {
-    expect(screen.queryByText(el)).toBeInTheDocument();
+    data.forEach((el): void => {
+      expect(screen.queryByText(el)).toBeInTheDocument();
+    });
   });
 });
