@@ -1,13 +1,8 @@
-import type { FC } from "react";
 import React from "react";
 
 import type { ICardProps } from "./types";
 
-const Card: FC<ICardProps> = ({
-  children,
-  className = "",
-  title,
-}: ICardProps): JSX.Element => {
+const Card = ({ children, className = "", title }: ICardProps): JSX.Element => {
   const baseCls = "border border-light rounded p-3";
 
   return (

@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React from "react";
 
 import { email, github, linkedIn } from "assets/imgs";
@@ -7,7 +6,7 @@ import { Section } from "components/Section";
 import { t } from "./lang";
 import { ContactLink } from "./Link";
 
-const Contact: FC = (): JSX.Element => {
+const Contact = (): JSX.Element => {
   return (
     <Section id={"contact"} title={t().title}>
       <div className={"justify-content-center d-flex"}>

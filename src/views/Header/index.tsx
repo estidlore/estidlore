@@ -1,11 +1,10 @@
-import type { FC } from "react";
 import React from "react";
 
 import { photo } from "assets/imgs";
 
 import { t } from "./lang";
 
-const Header: FC = (): JSX.Element => {
+const Header = (): JSX.Element => {
   return (
     <section
       className={"align-items-center d-flex flex-column py-5 vh-100 w-100"}

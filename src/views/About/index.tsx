@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React from "react";
 
 import { pawn, queen } from "assets/imgs";
@@ -6,7 +5,7 @@ import { Section } from "components/Section";
 
 import { t } from "./lang";
 
-const About: FC = (): JSX.Element => {
+const About = (): JSX.Element => {
   return (
     <Section id={"about"} title={t().title}>
       <p className={"fs-4 text-center"}>{t().profile}</p>

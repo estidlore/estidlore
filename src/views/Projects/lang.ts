@@ -2,6 +2,12 @@ import type { IProject } from "./types";
 
 const projects: IProject[] = [
   {
+    description: "SPA that generates my CV in pdf format from DOM nodes",
+    link: "https://github.com/estidlore/CV",
+    name: "CV",
+    skills: ["JsPDF", "React", "SASS/SCSS", "Typescript"]
+  },
+  {
     description:
       "SASS/SCSS Npm module with many powerful UI/UX utils with smooth " +
       "numeric values changes and concise selectors",
@@ -21,8 +27,7 @@ const projects: IProject[] = [
       "Godot",
       "Illustration",
       "Java",
-      "Optimization",
-      "Threads",
+      "Multi-Threads",
       "UI/UX",
       "XML"
     ]
@@ -32,12 +37,12 @@ const projects: IProject[] = [
       "Jam's 2nd place 3D game about escaping from a 3D generated maze",
     link: "https://github.com/estidlore/Freedom-Walls",
     name: "Freedom Walls",
-    skills: ["Algorithms", "Optimization", "Unity"]
+    skills: ["Algorithms", "C#", "Data Structures", "Optimization", "Unity"]
   }
 ];
 
 const ENG = {
-  more: "Do you want to see more projects?",
+  more: "Do you want to discover my other projects?",
   repositories: "Visit my repositories",
   title: "Projects"
 };

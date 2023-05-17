@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React, { useState } from "react";
 
 import { Section } from "components/Section";
@@ -8,7 +7,7 @@ import { t } from "./lang";
 
 const base = "item mb-0 px-3 py-2 text-center";
 
-const Work: FC = (): JSX.Element => {
+const Work = (): JSX.Element => {
   const [selection, setSelection] = useState(0);
 
   const work = t().work[selection];
