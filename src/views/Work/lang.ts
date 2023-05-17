@@ -2,6 +2,35 @@ import type { IWork } from "./types";
 
 const work: IWork[] = [
   {
+    company: "Sabana Hub",
+    description:
+      "Develop a mobile + web + cloud solution to train, evaluate and " +
+      "analyze the care capacity at home of chronically ill and their carers.",
+    from: {
+      month: "Dec",
+      year: 2022
+    },
+    id: "SabanaHub",
+    role: "Fullstack React Native Developer",
+    skills: [
+      "Express",
+      "Firebase",
+      "Git",
+      "GitHub Actions",
+      "Jest",
+      "NoSQL",
+      "Notifee",
+      "React",
+      "React Native",
+      "Testing-library",
+      "Typescript"
+    ],
+    to: {
+      month: "Aug",
+      year: 2023
+    }
+  },
+  {
     company: "Fluid Attacks",
     description:
       "UX team's developer for ARM platform. Main responsible of the " +
@@ -17,15 +46,15 @@ const work: IWork[] = [
       "ESLint",
       "Formik",
       "Git",
-      "HTML",
-      "React-i18next",
+      "i18next",
+      "Jest",
       "Linux",
       "Python",
       "React",
       "Storybook",
       "Styled-components",
       "Tachyons",
-      "React-Testing-library",
+      "Testing-library",
       "Typescript",
       "UI/UX"
     ],

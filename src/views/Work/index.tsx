@@ -34,7 +34,8 @@ const Work = (): JSX.Element => {
         )}
       </div>
       <div className={"ms-4 flex-fill"}>
-        <p className={"fs-3 mb-2"}>{`${work.role} - ${work.company}`}</p>
+        <p className={"fs-3 mb-1"}>{work.role}</p>
+        <p className={"fs-5 mb-1"}>{work.company}</p>
         <p className={"mb-3"}>
           {`${work.from.year} ${work.from.month} - ${
             work.to === "Present" ? work.to : `${work.to.year} ${work.to.month}`
