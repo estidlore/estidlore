@@ -1,7 +1,9 @@
 $dark: #202830;
 $light: #d0d8e0;
 
-a, button, .btn {
+a,
+button,
+.btn {
   cursor: url("/src/assets/imgs/CursorPointer.png"), auto !important;
 }
 
@@ -42,7 +44,7 @@ hr {
     position: absolute;
     top: 50%;
     transform: translate(-300%, -100%) rotate(45deg);
-    transition:  all 0.5s;
+    transition: all 0.5s;
     width: 50%;
   }
   &:hover {
