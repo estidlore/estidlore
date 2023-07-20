@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React from "react";
 
 import { github } from "assets/imgs";
@@ -9,7 +8,7 @@ import { Tags } from "components/Tags";
 
 import { projects, t } from "./lang";
 
-const Projects: FC = (): JSX.Element => {
+const Projects = (): JSX.Element => {
   return (
     <Section
       className={"align-items-stretch row"}

@@ -6,7 +6,7 @@ import { t } from "./lang";
 
 describe("Work", () => {
   it("renders the work view", () => {
-    expect.assertions(4);
+    expect.assertions(5);
     render(<Work />);
 
     expect(screen.queryByText(t().title)).toBeInTheDocument();

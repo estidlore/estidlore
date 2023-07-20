@@ -33,7 +33,7 @@ const Work = (): JSX.Element => {
           )
         )}
       </div>
-      <div className={"ms-4 flex-fill"}>
+      <div className={"ms-3 flex-fill"}>
         <p className={"fs-3 mb-1"}>{work.role}</p>
         <p className={"fs-5 mb-1"}>{work.company}</p>
         <p className={"mb-3"}>
