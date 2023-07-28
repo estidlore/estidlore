@@ -1,9 +1,15 @@
-const ENG = {
-  greeting: "Hello",
-  introduction: "I'm Estid",
-  subtitle: "A dev better than yesterday"
-};
+import { Language } from "utils/contexts";
 
-const t = (): typeof ENG => ENG;
+const { entries, useTranslation } = Language.translation({
+  ENG: {
+    greeting: "Hello",
+    introduction: "I'm Estid",
+    subtitle: "A developer better than yesterday"
+  },
+  SPA: {
+    greeting: "Hola",
+    introduction: "Soy Estid"
+  }
+});
 
-export { t };
+export { entries, useTranslation };
