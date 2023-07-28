@@ -8,4 +8,10 @@ interface DeepRecord<T = string> {
   [k: string]: DeepRecord<T> | T;
 }
 
-export type { DeepPartial, DeepRecord };
+interface Point {
+  toString: () => string;
+  x: number;
+  y: number;
+}
+
+export type { DeepPartial, DeepRecord, Point };
