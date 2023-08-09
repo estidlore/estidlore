@@ -12,6 +12,10 @@ hr {
   opacity: 0.5;
 }
 
+p {
+  white-space: pre-line;
+}
+
 :root {
   cursor: url("/src/assets/imgs/Cursor.png"), auto !important;
 }

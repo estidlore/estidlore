@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from "react";
 
-import { photo } from "assets/imgs";
+import { imgs } from "assets/imgs";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
@@ -57,7 +57,7 @@ const Header = (): JSX.Element => {
         <img
           alt={"Estid"}
           className={"rounded-circle"}
-          src={photo}
+          src={imgs.photo}
           width={192}
         />
       </div>

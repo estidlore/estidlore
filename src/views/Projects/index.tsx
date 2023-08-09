@@ -1,6 +1,6 @@
 import React from "react";
 
-import { github } from "assets/imgs";
+import { imgs } from "assets/imgs";
 import { Card } from "components/Card";
 import { Link } from "components/Link";
 import { Section } from "components/Section";
@@ -26,7 +26,11 @@ const Projects = (): JSX.Element => {
                   {el.name}
                   {el.link ? (
                     <Link to={el.link}>
-                      <img className={"filter-light"} src={github} width={16} />
+                      <img
+                        className={"filter-light"}
+                        src={imgs.github}
+                        width={16}
+                      />
                     </Link>
                   ) : undefined}
                 </p>

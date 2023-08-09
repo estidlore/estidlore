@@ -5,4 +5,13 @@ import pawn from "./Pawn.svg";
 import photo from "./Photo512.jpg";
 import queen from "./Queen.svg";
 
-export { email, github, linkedIn, pawn, photo, queen };
+const imgs = {
+  email,
+  github,
+  linkedIn,
+  pawn,
+  photo,
+  queen
+};
+
+export { imgs };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { email, github, linkedIn } from "assets/imgs";
+import { imgs } from "assets/imgs";
 import { Section } from "components/Section";
 
 import { t } from "./lang";
@@ -10,9 +10,12 @@ const Contact = (): JSX.Element => {
   return (
     <Section id={"contact"} title={t().title}>
       <div className={"justify-content-center d-flex"}>
-        <ContactLink src={email} to={"mailto:estidlore@outlook.com"} />
-        <ContactLink src={github} to={"https://github.com/estidlore"} />
-        <ContactLink src={linkedIn} to={"https://linkedin.com/in/estidlore"} />
+        <ContactLink src={imgs.email} to={"mailto:estidlore@outlook.com"} />
+        <ContactLink src={imgs.github} to={"https://github.com/estidlore"} />
+        <ContactLink
+          src={imgs.linkedIn}
+          to={"https://linkedin.com/in/estidlore"}
+        />
       </div>
     </Section>
   );
