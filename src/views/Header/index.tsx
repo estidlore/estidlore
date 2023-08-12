@@ -1,13 +1,19 @@
+import "./styles.scss";
+
 import React, { useCallback, useRef } from "react";
 
 import { imgs } from "assets/imgs";
+import { Stars } from "components/Stars";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
 
+const center = "align-items-center d-flex flex-column";
+const noOverflow = "overflow-hidden position-relative";
+
 const Header = (): JSX.Element => {
   const { lang, t } = useTranslation();
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const parallax = useParallax(ref);
 
   const handleSetSpanish = useCallback(() => {
@@ -18,14 +24,29 @@ const Header = (): JSX.Element => {
   }, []);
 
   return (
-    <section
-      className={"align-items-center d-flex flex-column py-5 vh-100 w-100"}
+    <div
+      className={`py-5 vh-100 ${center} ${noOverflow}`}
+      id={"header"}
       ref={ref}
     >
+      {Array.from(Array(10).keys()).map((el) => {
+        const distance = Math.sqrt(10 * el + 10);
+        return (
+          <div
+            className={"h-100 position-absolute w-100"}
+            key={el}
+            style={{
+              translate: parallax(distance).toString()
+            }}
+          >
+            <Stars amount={10} />
+          </div>
+        );
+      })}
       <p
         className={"display-1 fw-bold mb-2"}
         style={{
-          translate: parallax(2.5).toString()
+          translate: parallax(5).toString()
         }}
       >
         {t.greeting}
@@ -33,7 +54,7 @@ const Header = (): JSX.Element => {
       <p
         className={"display-4 fw-bold mb-2"}
         style={{
-          translate: parallax(3).toString()
+          translate: parallax(6).toString()
         }}
       >
         {t.introduction}
@@ -41,7 +62,7 @@ const Header = (): JSX.Element => {
       <p
         className={"fs-3 mb-0"}
         style={{
-          translate: parallax(4).toString()
+          translate: parallax(7).toString()
         }}
       >
         {t.subtitle}
@@ -51,7 +72,7 @@ const Header = (): JSX.Element => {
         onMouseEnter={handleSetSpanish}
         onMouseLeave={handleSetEnglish}
         style={{
-          translate: parallax(2).toString()
+          translate: parallax(4).toString()
         }}
       >
         <img
@@ -61,7 +82,7 @@ const Header = (): JSX.Element => {
           width={192}
         />
       </div>
-    </section>
+    </div>
   );
 };
 

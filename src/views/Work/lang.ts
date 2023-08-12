@@ -4,8 +4,10 @@ const work: IWork[] = [
   {
     company: "Sabana Hub",
     description:
-      "Develop a mobile + web + cloud solution to train, evaluate and " +
-      "analyze the care capacity at home of chronically ill and their carers.",
+      "- Manage end-to-end development cycle from concept to deployment" +
+      "\n- Collaborate with designers to create simple and intuitive UI/UX" +
+      "\n- Implement tests, CI/CD workflows, and behavior-driven issues" +
+      "\n- Support less experienced team members contributing to their growth",
     from: {
       month: "Dec",
       year: 2022
@@ -33,9 +35,9 @@ const work: IWork[] = [
   {
     company: "Fluid Attacks",
     description:
-      "UX team's developer for ARM platform. Main responsible of the " +
-      "platform's storybook development and new designs implementation. " +
-      "Furthermore, proposed and contributed to design some features.",
+      "- Cooperate with designers to adopt atomic design" +
+      "\n- Optimize and enhance core reusable components" +
+      "\n- Implement new design and features of core platform",
     from: {
       month: "Apr",
       year: 2022
@@ -66,8 +68,9 @@ const work: IWork[] = [
   {
     company: "Universidad de La Sabana",
     description:
-      "Designer and developer of web apps for Dirección Central De " +
-      "Estudiantes department, and maintain and improve the exitent ones.",
+      "- Migrate html website to React.js and bootstrap" +
+      "\n- Enhance web with simple, responsive and intuitive UI/UX" +
+      "\n- Provide custom analytics and graphics with pdf & email reports",
     from: {
       month: "Jan",
       year: 2021
@@ -95,10 +98,11 @@ const work: IWork[] = [
   {
     company: "Pietrario",
     description:
-      "Lead the UI/UX design and development of Flutter + AR game. " +
-      "Author of key features such as the game and shop views design and " +
-      "behavior with its corresponding models and controllers logic; " +
-      "also the support of multiple languages and dark mode.",
+      "- Integrate game with native AR view" +
+      "\n- Plan and develop game models & controllers and main view" +
+      "\n- Supervise and enhance the UI design and app UX" +
+      "\n- Lead development and support team members",
+
     from: {
       month: "Jul",
       year: 2020
