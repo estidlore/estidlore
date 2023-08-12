@@ -1,22 +1,19 @@
-import { useCallback, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const useRect = (ref: React.RefObject<HTMLElement>): DOMRect | undefined => {
-  const [rect, setRect] = useState(ref.current?.getBoundingClientRect());
+  const [rect, setRect] = useState<DOMRect>();
 
   const handleResize = useCallback(() => {
-    const newRect = ref.current?.getBoundingClientRect();
-    if (newRect !== undefined) {
-      setRect(newRect);
-    }
+    setRect(ref.current?.getBoundingClientRect());
   }, [ref.current]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   return rect;
 };
