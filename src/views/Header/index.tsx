@@ -78,6 +78,7 @@ const Header = (): JSX.Element => {
         <img
           alt={"Estid"}
           className={"rounded-circle"}
+          height={192}
           src={imgs.photo}
           width={192}
         />

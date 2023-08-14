@@ -7,7 +7,13 @@ import type { IContactLinkProps } from "./types";
 const ContactLink = ({ alt, src, to }: IContactLinkProps): JSX.Element => {
   return (
     <Link className={"mx-2"} to={to}>
-      <img alt={alt} className={"filter-light"} src={src} width={64} />
+      <img
+        alt={alt}
+        className={"filter-light"}
+        height={64}
+        src={src}
+        width={64}
+      />
     </Link>
   );
 };

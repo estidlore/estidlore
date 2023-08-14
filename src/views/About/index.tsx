@@ -13,12 +13,14 @@ const About = (): JSX.Element => {
         <img
           alt={"Chess pawn"}
           className={"pawn"}
+          height={128}
           src={imgs.pawn}
           width={128}
         />
         <img
           alt={"Chess queen"}
           className={"queen position-absolute"}
+          height={128}
           src={imgs.queen}
           width={128}
         />

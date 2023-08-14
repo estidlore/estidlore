@@ -7,6 +7,11 @@ function src(subdir) {
 }
 
 module.exports = {
+  devServer: {
+    headers: {
+      "Cache-Control": "public, max-age=604800"
+    }
+  },
   devtool: prod ? undefined : "source-map",
   entry: "./src/index.tsx",
   mode: prod ? "production" : "development",
@@ -16,16 +21,13 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         resolve: {
-          extensions: [".ts", ".tsx"],
+          extensions: [".ts", ".tsx"]
         },
-        use: "ts-loader",
+        use: "ts-loader"
       },
       {
         test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-        ],
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.scss$/,
@@ -36,26 +38,40 @@ module.exports = {
             loader: "sass-loader",
             options: {
               sassOptions: {
-                precision: 3,
-              },
-            },
-          },
-        ],
+                precision: 3
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(ico|png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
+        type: "asset/resource"
+      }
     ]
   },
+  optimization: {
+    moduleIds: "deterministic",
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: "all",
+          name: "vendors",
+          test: /[\\/]node_modules[\\/]/
+        }
+      }
+    }
+  },
   output: {
-    path: __dirname + "/build",
+    filename: "[name].[contenthash].js",
+    path: __dirname + "/build"
   },
   plugins: [
     new HtmlWebpackPlugin({
       favicon: "src/assets/imgs/favicon.ico",
-      template: "src/index.html",
-    }),
+      template: "src/index.html"
+    })
   ],
   resolve: {
     alias: {
@@ -64,8 +80,8 @@ module.exports = {
       styles: src("styles"),
       types: src("types"),
       utils: src("utils"),
-      views: src("views"),
+      views: src("views")
     },
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
-  },
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
+  }
 };

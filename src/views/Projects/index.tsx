@@ -29,6 +29,7 @@ const Projects = (): JSX.Element => {
                       <img
                         alt={"Visit GitHub repository"}
                         className={"filter-light"}
+                        height={16}
                         src={imgs.github}
                         width={16}
                       />
