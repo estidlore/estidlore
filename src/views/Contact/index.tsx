@@ -10,9 +10,18 @@ const Contact = (): JSX.Element => {
   return (
     <Section id={"contact"} title={t().title}>
       <div className={"justify-content-center d-flex"}>
-        <ContactLink src={imgs.email} to={"mailto:estidlore@outlook.com"} />
-        <ContactLink src={imgs.github} to={"https://github.com/estidlore"} />
         <ContactLink
+          alt={"Send email"}
+          src={imgs.email}
+          to={"mailto:estidlore@outlook.com"}
+        />
+        <ContactLink
+          alt={"Visit GitHub profile"}
+          src={imgs.github}
+          to={"https://github.com/estidlore"}
+        />
+        <ContactLink
+          alt={"Visit LinkedIn profile"}
           src={imgs.linkedIn}
           to={"https://linkedin.com/in/estidlore"}
         />

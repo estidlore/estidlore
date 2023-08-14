@@ -22,18 +22,19 @@ const Projects = (): JSX.Element => {
               className={"h-100"}
               key={el.name}
               title={
-                <p className={"d-flex mb-0 justify-content-between"}>
+                <>
                   {el.name}
                   {el.link ? (
-                    <Link to={el.link}>
+                    <Link className={"float-end"} to={el.link}>
                       <img
+                        alt={"Visit GitHub repository"}
                         className={"filter-light"}
                         src={imgs.github}
                         width={16}
                       />
                     </Link>
                   ) : undefined}
-                </p>
+                </>
               }
             >
               <p className={"mb-2"}>{el.description}</p>

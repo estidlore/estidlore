@@ -2,7 +2,7 @@ import type { IProject } from "./types";
 
 const projects: IProject[] = [
   {
-    description: "SPA that generates my CV in pdf format from DOM nodes",
+    description: "React SPA that generates my CV in pdf format",
     link: "https://github.com/estidlore/CV",
     name: "CV",
     skills: ["JsPDF", "React", "SASS/SCSS", "Typescript"]

@@ -10,8 +10,14 @@ const About = (): JSX.Element => {
     <Section id={"about"} title={t().title}>
       <p className={"fs-4 text-center"}>{t().profile}</p>
       <div className={"chess-piece d-flex justify-content-center mt-5"}>
-        <img className={"pawn"} src={imgs.pawn} width={128} />
         <img
+          alt={"Chess pawn"}
+          className={"pawn"}
+          src={imgs.pawn}
+          width={128}
+        />
+        <img
+          alt={"Chess queen"}
           className={"queen position-absolute"}
           src={imgs.queen}
           width={128}

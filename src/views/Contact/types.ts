@@ -1,4 +1,5 @@
 interface IContactLinkProps {
+  alt?: string;
   src?: string;
   to: string;
 }
