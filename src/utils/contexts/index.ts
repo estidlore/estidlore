@@ -1,7 +1,6 @@
-import { createLanguageContext } from "./language";
+import { createLanguageContext } from "ruxi";
 
 const Language = createLanguageContext({
-  default: "ENG",
   languages: {
     ENG: {
       name: "English"
@@ -9,7 +8,8 @@ const Language = createLanguageContext({
     SPA: {
       name: "Español"
     }
-  }
+  },
+  main: "ENG"
 });
 
 export { Language };

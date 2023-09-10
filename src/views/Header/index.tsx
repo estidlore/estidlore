@@ -4,6 +4,7 @@ import React, { useCallback, useRef } from "react";
 
 import { imgs } from "assets/imgs";
 import { Stars } from "components/Stars";
+import { Language } from "utils/contexts";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
@@ -12,7 +13,8 @@ const center = "align-items-center d-flex flex-column";
 const noOverflow = "overflow-hidden position-relative";
 
 const Header = (): JSX.Element => {
-  const { lang, t } = useTranslation();
+  const lang = Language.useLanguage();
+  const t = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const parallax = useParallax(ref);
 
