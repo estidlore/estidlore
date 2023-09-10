@@ -2,6 +2,14 @@ import type { IProject } from "./types";
 
 const projects: IProject[] = [
   {
+    description:
+      "npm open-source library with common utilities for JS and TS " +
+      "for needs such as arrays, math objects and time",
+    link: "https://github.com/estidlore/litus",
+    name: "Litus",
+    skills: ["Algorithms", "Javascript", "Jest", "Typescript"]
+  },
+  {
     description: "React SPA that generates my CV in pdf format",
     link: "https://github.com/estidlore/CV",
     name: "CV",
@@ -14,23 +22,6 @@ const projects: IProject[] = [
     link: "https://github.com/estidlore/bonbon",
     name: "Bonbon",
     skills: ["React", "SASS", "Typescript", "UI/UX"]
-  },
-  {
-    description:
-      "2D game about dodging obstacles with several game modes and many " +
-      "personalization options",
-    link: "https://github.com/estidlore/Dodgie",
-    name: "Dodgie",
-    skills: [
-      "Android",
-      "C#",
-      "Godot",
-      "Illustration",
-      "Java",
-      "Multi-Threads",
-      "UI/UX",
-      "XML"
-    ]
   },
   {
     description:

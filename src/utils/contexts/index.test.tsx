@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import React, { createContext } from "react";
-
 import { createUseContext } from "ruxi";
 
 describe("utils/contexts", () => {
