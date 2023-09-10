@@ -1,7 +1,10 @@
-const ENG = {
-  title: "Contact"
-};
+import { Language } from "utils/contexts";
 
-const t = (): typeof ENG => ENG;
+const { entries, useTranslation } = Language.translation({
+  ENG: {
+    resume: "View my resume",
+    title: "Contact"
+  }
+});
 
-export { t };
+export { entries, useTranslation };

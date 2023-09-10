@@ -5,15 +5,15 @@ const projects: IProject[] = [
     description: "React SPA that generates my CV in pdf format",
     link: "https://github.com/estidlore/CV",
     name: "CV",
-    skills: ["JsPDF", "React", "SASS/SCSS", "Typescript"]
+    skills: ["JsPDF", "React", "SASS", "Typescript"]
   },
   {
     description:
-      "SASS/SCSS Npm module with many powerful UI/UX utils with smooth " +
+      "SASS Npm module with many powerful UI/UX utils with smooth " +
       "numeric values changes and concise selectors",
     link: "https://github.com/estidlore/bonbon",
     name: "Bonbon",
-    skills: ["React", "SASS/SCSS", "Typescript", "UI/UX"]
+    skills: ["React", "SASS", "Typescript", "UI/UX"]
   },
   {
     description:
