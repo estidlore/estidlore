@@ -6,7 +6,7 @@ const Section = ({
   children,
   className,
   id,
-  title
+  title,
 }: ISectionProps): JSX.Element => {
   return (
     <section className={"py-5"} id={id}>

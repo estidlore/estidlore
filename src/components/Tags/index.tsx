@@ -10,7 +10,7 @@ const Tags = ({ data }: ITagsProps): JSX.Element => {
           <span className={"d-inline-block me-3"} key={el}>
             {el}
           </span>
-        )
+        ),
       )}
     </p>
   );

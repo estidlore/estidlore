@@ -1,5 +1,3 @@
-import "./styles.scss";
-
 import React, { useCallback, useRef } from "react";
 
 import { imgs } from "assets/imgs";
@@ -8,6 +6,7 @@ import { Language } from "utils/contexts";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
+import "./styles.scss";
 
 const center = "align-items-center d-flex flex-column";
 const noOverflow = "overflow-hidden position-relative";
@@ -38,7 +37,7 @@ const Header = (): JSX.Element => {
             className={"h-100 position-absolute w-100"}
             key={el}
             style={{
-              translate: parallax(distance).toString()
+              translate: parallax(distance).toString(),
             }}
           >
             <Stars amount={10} />
@@ -48,7 +47,7 @@ const Header = (): JSX.Element => {
       <p
         className={"display-1 fw-bold mb-2"}
         style={{
-          translate: parallax(5).toString()
+          translate: parallax(5).toString(),
         }}
       >
         {t.greeting}
@@ -56,7 +55,7 @@ const Header = (): JSX.Element => {
       <p
         className={"display-4 fw-bold mb-2"}
         style={{
-          translate: parallax(6).toString()
+          translate: parallax(6).toString(),
         }}
       >
         {t.introduction}
@@ -64,7 +63,7 @@ const Header = (): JSX.Element => {
       <p
         className={"fs-3 mb-0"}
         style={{
-          translate: parallax(7).toString()
+          translate: parallax(7).toString(),
         }}
       >
         {t.subtitle}
@@ -74,7 +73,7 @@ const Header = (): JSX.Element => {
         onMouseEnter={handleSetSpanish}
         onMouseLeave={handleSetEnglish}
         style={{
-          translate: parallax(4).toString()
+          translate: parallax(4).toString(),
         }}
       >
         <img

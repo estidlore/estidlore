@@ -43,7 +43,7 @@ const Projects = (): JSX.Element => {
               <Tags data={el.skills} />
             </Card>
           </div>
-        )
+        ),
       )}
       <p className={"mb-0 mt-2"}>
         {t().more}

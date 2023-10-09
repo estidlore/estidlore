@@ -3,13 +3,13 @@ import { createLanguageContext } from "ruxi";
 const Language = createLanguageContext({
   languages: {
     ENG: {
-      name: "English"
+      name: "English",
     },
     SPA: {
-      name: "Español"
-    }
+      name: "Español",
+    },
   },
-  main: "ENG"
+  main: "ENG",
 });
 
 export { Language };

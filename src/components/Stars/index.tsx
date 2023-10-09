@@ -1,12 +1,11 @@
-import "./styles.scss";
-
 import React from "react";
 
+import "./styles.scss";
 import type { Star, StarsProps } from "./types";
 
 const randomColor = (): string => {
   const channels = Array.from(Array(3)).map(
-    () => Math.floor(Math.random() * 32) + 192
+    () => Math.floor(Math.random() * 32) + 192,
   );
   return `rgb(${channels.join(",")})`;
 };
@@ -21,10 +20,10 @@ const getStar = (): Star => {
     size: Math.random() * 3 + 1.5,
     twinkle: {
       period: Math.random() + 1,
-      time: Math.random()
+      time: Math.random(),
     },
     x: randomPosition(110),
-    y: randomPosition(110)
+    y: randomPosition(110),
   };
 };
 
@@ -44,7 +43,7 @@ const Stars = React.memo(({ amount }: StarsProps): JSX.Element => {
               background: star.color,
               left: `${star.x}%`,
               padding: star.size,
-              top: `${star.y}%`
+              top: `${star.y}%`,
             }}
           />
         );

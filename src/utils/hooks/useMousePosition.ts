@@ -8,7 +8,7 @@ const getDistance = (p1: Point, p2: Point): number => {
 
 const useMousePosition = (
   ref: React.RefObject<HTMLElement>,
-  origin: Point = { x: 0, y: 0 }
+  origin: Point = { x: 0, y: 0 },
 ): Point => {
   const [position, setPosition] = useState<Point>({ x: 0, y: 0 });
 
@@ -20,7 +20,7 @@ const useMousePosition = (
         setPosition(newPos);
       }
     },
-    [origin.x, origin.y, position]
+    [origin.x, origin.y, position],
   );
 
   useEffect(() => {

@@ -6,7 +6,7 @@ const ENG = {
     "Constantly working on growing and acquiring multidisciplinary skills. " +
     "Known by a fast learning, creativity and pursuit excellence in all he " +
     "is and all he does.",
-  title: "About me"
+  title: "About me",
 };
 
 const t = (): typeof ENG => ENG;

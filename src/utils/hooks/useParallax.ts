@@ -11,12 +11,12 @@ const getCenter = (rect?: DOMRect): Point => {
   }
   return {
     x: (rect.left + rect.right) / 2,
-    y: (rect.top + rect.bottom) / 2
+    y: (rect.top + rect.bottom) / 2,
   };
 };
 
 const useParallax = (
-  ref: React.RefObject<HTMLElement>
+  ref: React.RefObject<HTMLElement>,
 ): ((distance: number) => Point) => {
   const rect = useRect(ref);
   const origin = getCenter(rect);
@@ -28,9 +28,9 @@ const useParallax = (
         return `${this.x}px ${this.y}px`;
       },
       x: mousePos.x / -distance,
-      y: mousePos.y / -distance
+      y: mousePos.y / -distance,
     }),
-    [mousePos]
+    [mousePos],
   );
 };
 

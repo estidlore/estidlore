@@ -30,7 +30,7 @@ const Work = (): JSX.Element => {
             >
               {el.id}
             </p>
-          )
+          ),
         )}
       </div>
       <div className={"ms-3 flex-fill"}>

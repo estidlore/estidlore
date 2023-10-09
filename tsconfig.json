@@ -20,14 +20,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "outDir": "dist",
-    "paths": {
-      "assets/*": ["assets/*"],
-      "components/*": [ "components/*" ],
-      "styles/*": [ "styles/*" ],
-      "types/*": ["types/*"],
-      "utils/*": [ "utils/*" ],
-      "views/*": [ "views/*" ],
-    },
     "removeComments": true,
     "resolveJsonModule": true,
     "rootDir": "src",
@@ -37,7 +29,7 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "ES5",
+    "target": "ES5"
   },
-  "include": ["src"],
+  "include": ["src"]
 }

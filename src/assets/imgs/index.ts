@@ -11,7 +11,7 @@ const imgs = {
   linkedIn,
   pawn,
   photo,
-  queen
+  queen,
 };
 
 export { imgs };

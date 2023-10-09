@@ -13,7 +13,7 @@ describe("Header", () => {
     render(
       <Language.Provider>
         <Header />
-      </Language.Provider>
+      </Language.Provider>,
     );
   });
 

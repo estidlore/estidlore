@@ -10,7 +10,7 @@ const work: IWork[] = [
       "\n- Support less experienced team members contributing to their growth",
     from: {
       month: "Dec",
-      year: 2022
+      year: 2022,
     },
     id: "SabanaHub",
     role: "Fullstack React Native Developer",
@@ -25,12 +25,12 @@ const work: IWork[] = [
       "React",
       "React Native",
       "Testing-library",
-      "Typescript"
+      "Typescript",
     ],
     to: {
       month: "Aug",
-      year: 2023
-    }
+      year: 2023,
+    },
   },
   {
     company: "Fluid Attacks",
@@ -40,7 +40,7 @@ const work: IWork[] = [
       "\n- Implement new design and features of core platform",
     from: {
       month: "Apr",
-      year: 2022
+      year: 2022,
     },
     id: "Fluid",
     role: "Security Developer",
@@ -58,12 +58,12 @@ const work: IWork[] = [
       "Tachyons",
       "Testing-library",
       "Typescript",
-      "UI/UX"
+      "UI/UX",
     ],
     to: {
       month: "Sep",
-      year: 2022
-    }
+      year: 2022,
+    },
   },
   {
     company: "Universidad de La Sabana",
@@ -73,7 +73,7 @@ const work: IWork[] = [
       "\n- Provide custom analytics and graphics with pdf & email reports",
     from: {
       month: "Jan",
-      year: 2021
+      year: 2021,
     },
     id: "UniSabana",
     role: "Web developer",
@@ -88,12 +88,12 @@ const work: IWork[] = [
       "JsPDF",
       "React",
       "Sass",
-      "UI/UX"
+      "UI/UX",
     ],
     to: {
       month: "Jan",
-      year: 2022
-    }
+      year: 2022,
+    },
   },
   {
     company: "Pietrario",
@@ -105,21 +105,21 @@ const work: IWork[] = [
 
     from: {
       month: "Jul",
-      year: 2020
+      year: 2020,
     },
     id: "Pietrario",
     role: "Software developer",
     skills: ["Agile", "AR", "Dart", "Flutter", "Git", "Java", "MVC", "UI/UX"],
     to: {
       month: "Nov",
-      year: 2020
-    }
-  }
+      year: 2020,
+    },
+  },
 ];
 
 const ENG = {
   title: "Work",
-  work
+  work,
 };
 
 const t = (): typeof ENG => ENG;

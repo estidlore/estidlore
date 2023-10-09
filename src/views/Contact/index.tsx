@@ -4,8 +4,8 @@ import { imgs } from "assets/imgs";
 import { Link } from "components/Link";
 import { Section } from "components/Section";
 
-import { useTranslation } from "./lang";
 import { ContactLink } from "./Link";
+import { useTranslation } from "./lang";
 
 const Contact = (): JSX.Element => {
   const t = useTranslation();

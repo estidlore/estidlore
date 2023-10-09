@@ -14,7 +14,7 @@ describe("utils/contexts", () => {
       render(
         <NumContext.Provider value={num}>
           <NumDemo />
-        </NumContext.Provider>
+        </NumContext.Provider>,
       );
       expect(screen.queryByText(num)).toBeInTheDocument();
     });
