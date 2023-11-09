@@ -10,9 +10,9 @@ const ContactLink = ({ alt, src, to }: IContactLinkProps): JSX.Element => {
       <img
         alt={alt}
         className={"brightness-0 invert"}
-        height={64}
+        height={32}
         src={src}
-        width={64}
+        width={32}
       />
     </Link>
   );
