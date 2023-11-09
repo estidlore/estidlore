@@ -1,0 +1,7 @@
+.Card {
+  @apply bg-gray-800 border border-gray-700 rounded p-4;
+}
+
+.Card > .title {
+  @apply text-2xl font-bold mb-2;
+}

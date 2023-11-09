@@ -1,87 +1,84 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
-const prod = process.env.NODE_ENV === "production";
 
 function src(subdir) {
   return path.join(__dirname, "src", subdir);
 }
 
-module.exports = {
-  devServer: {
-    headers: {
-      "Cache-Control": "public, max-age=604800"
-    }
-  },
-  devtool: prod ? undefined : "source-map",
+module.exports = ({ ENV = "development" }) => ({
+  devtool: ENV === "production" ? undefined : "source-map",
   entry: "./src/index.tsx",
-  mode: prod ? "production" : "development",
+  mode: ENV,
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        resolve: {
-          extensions: [".ts", ".tsx"]
+        use: {
+          loader: "ts-loader",
+          options: {
+            configFile: "tsconfig.prod.json",
+          },
         },
-        use: "ts-loader"
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
-        test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              sassOptions: {
-                precision: 3
-              }
-            }
-          }
-        ]
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
-      {
-        test: /\.(ico|png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource"
-      }
-    ]
+    ],
   },
   optimization: {
-    moduleIds: "deterministic",
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+        parallel: true,
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+      }),
+    ],
     runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         vendor: {
           chunks: "all",
           name: "vendors",
-          test: /[\\/]node_modules[\\/]/
-        }
-      }
-    }
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
+      maxSize: 250000,
+    },
   },
   output: {
     filename: "[name].[contenthash].js",
-    path: __dirname + "/build"
+    path: __dirname + "/build",
   },
   plugins: [
     new HtmlWebpackPlugin({
       favicon: "src/assets/imgs/favicon.ico",
-      template: "src/index.html"
-    })
+      template: "src/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
   ],
   resolve: {
     alias: {
       assets: src("assets"),
       components: src("components"),
-      styles: src("styles"),
       types: src("types"),
       utils: src("utils"),
-      views: src("views")
+      views: src("views"),
     },
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
-  }
-};
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
+});

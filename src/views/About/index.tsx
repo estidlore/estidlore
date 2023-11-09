@@ -6,20 +6,22 @@ import { Section } from "components/Section";
 import { t } from "./lang";
 
 const About = (): JSX.Element => {
+  const cssChess = "[&>*]:duration-300 [&>*]:ease-linear [&>*]:transition";
+
   return (
     <Section id={"about"} title={t().title}>
-      <p className={"fs-4 text-center"}>{t().profile}</p>
-      <div className={"chess-piece d-flex justify-content-center mt-5"}>
+      <p className={"text-2xl text-center"}>{t().profile}</p>
+      <div className={`flex group justify-center mt-12 relative ${cssChess}`}>
         <img
           alt={"Chess pawn"}
-          className={"pawn"}
+          className={"group-hover:opacity-0"}
           height={128}
           src={imgs.pawn}
           width={128}
         />
         <img
           alt={"Chess queen"}
-          className={"queen position-absolute"}
+          className={"absolute opacity-0 group-hover:opacity-100"}
           height={128}
           src={imgs.queen}
           width={128}

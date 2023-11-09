@@ -1,0 +1,7 @@
+.Link {
+  @apply duration-300 p-2 rounded transition underline;
+}
+
+.Link:hover {
+  @apply bg-gray-700;
+}

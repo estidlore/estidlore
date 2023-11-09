@@ -6,7 +6,6 @@ module.exports = {
   importOrder: [
     "<BUILT_IN_MODULES>",
     "<THIRD_PARTY_MODULES>",
-    "^~",
     "^(assets|components|types|utils|views)",
     "^\\.",
   ],

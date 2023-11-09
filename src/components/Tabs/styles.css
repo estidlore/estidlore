@@ -1,0 +1,16 @@
+.Tabs {
+  @apply flex flex-row items-start;
+}
+
+.Tabs > .buttons {
+  @apply bg-gray-800 border border-gray-700 flex flex-col mr-4
+  overflow-hidden rounded shrink-0;
+}
+
+.Tabs > .buttons > * {
+  @apply duration-300 hover:bg-gray-700 px-3 py-2 text-center transition;
+}
+
+.Tabs > .buttons > .selected {
+  @apply bg-gray-600;
+}

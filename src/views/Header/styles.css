@@ -1,0 +1,7 @@
+#header {
+  @apply flex flex-col h-screen items-center overflow-hidden py-12 relative;
+}
+
+#header > * {
+  transition: 0.4s ease-out;
+}

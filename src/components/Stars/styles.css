@@ -10,5 +10,6 @@
 }
 
 .Star {
+  @apply absolute rounded-full -translate-x-1/2 -translate-y-1/2;
   animation: fadeIn 0s ease-in-out 0s infinite alternate;
 }

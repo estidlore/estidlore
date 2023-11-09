@@ -1,6 +1,7 @@
+import "./styles.css";
+
 import React from "react";
 
-import "./styles.scss";
 import type { Star, StarsProps } from "./types";
 
 const randomColor = (): string => {
@@ -35,7 +36,7 @@ const Stars = React.memo(({ amount }: StarsProps): JSX.Element => {
       {stars.map((star) => {
         return (
           <div
-            className={"position-absolute rounded-circle Star translate-middle"}
+            className={"Star"}
             key={`${star.x}-${star.y}-${star.size}`}
             style={{
               animationDelay: `${star.twinkle.time}s`,

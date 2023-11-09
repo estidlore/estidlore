@@ -1,3 +1,5 @@
+import "./styles.css";
+
 import React, { useCallback, useRef } from "react";
 
 import { imgs } from "assets/imgs";
@@ -6,10 +8,6 @@ import { Language } from "utils/contexts";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
-import "./styles.scss";
-
-const center = "align-items-center d-flex flex-column";
-const noOverflow = "overflow-hidden position-relative";
 
 const Header = (): JSX.Element => {
   const lang = Language.useLanguage();
@@ -25,16 +23,12 @@ const Header = (): JSX.Element => {
   }, []);
 
   return (
-    <div
-      className={`py-5 vh-100 ${center} ${noOverflow}`}
-      id={"header"}
-      ref={ref}
-    >
+    <div id={"header"} ref={ref}>
       {Array.from(Array(10).keys()).map((el) => {
         const distance = Math.sqrt(10 * el + 10);
         return (
           <div
-            className={"h-100 position-absolute w-100"}
+            className={"absolute h-full w-full"}
             key={el}
             style={{
               translate: parallax(distance).toString(),
@@ -45,7 +39,7 @@ const Header = (): JSX.Element => {
         );
       })}
       <p
-        className={"display-1 fw-bold mb-2"}
+        className={"text-7xl font-bold mb-2"}
         style={{
           translate: parallax(5).toString(),
         }}
@@ -53,7 +47,7 @@ const Header = (): JSX.Element => {
         {t.greeting}
       </p>
       <p
-        className={"display-4 fw-bold mb-2"}
+        className={"text-5xl font-bold mb-2"}
         style={{
           translate: parallax(6).toString(),
         }}
@@ -61,7 +55,7 @@ const Header = (): JSX.Element => {
         {t.introduction}
       </p>
       <p
-        className={"fs-3 mb-0"}
+        className={"text-3xl mb-0"}
         style={{
           translate: parallax(7).toString(),
         }}
@@ -69,7 +63,7 @@ const Header = (): JSX.Element => {
         {t.subtitle}
       </p>
       <div
-        className={"photo mt-5"}
+        className={"border-4 p-2 rounded-full mt-12"}
         onMouseEnter={handleSetSpanish}
         onMouseLeave={handleSetEnglish}
         style={{
@@ -78,7 +72,7 @@ const Header = (): JSX.Element => {
       >
         <img
           alt={"Estid"}
-          className={"rounded-circle"}
+          className={"rounded-full"}
           height={192}
           src={imgs.photo}
           width={192}

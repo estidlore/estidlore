@@ -7,7 +7,7 @@ const Tags = ({ data }: ITagsProps): JSX.Element => {
     <p className={"mb-0"}>
       {data.map(
         (el): JSX.Element => (
-          <span className={"d-inline-block me-3"} key={el}>
+          <span className={"inline-block mr-3"} key={el}>
             {el}
           </span>
         ),
