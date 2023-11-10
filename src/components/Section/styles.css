@@ -1,5 +1,5 @@
 .Section {
-  @apply mx-auto py-12;
+  @apply bg-inherit mx-auto py-12 sticky top-0;
   max-width: 700px;
 }
 

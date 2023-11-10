@@ -11,7 +11,7 @@ import { projects, t } from "./lang";
 const Projects = (): JSX.Element => {
   return (
     <Section
-      className={"gap-4 grid grid-cols-2"}
+      className={"gap-4 grid grid-cols-2 place-items-center"}
       id={"projects"}
       title={t().title}
     >
@@ -43,15 +43,12 @@ const Projects = (): JSX.Element => {
           </Card>
         ),
       )}
-      <p className={"mb-0 mt-2"}>
-        {t().more}
-        <Link
-          className={"mr-2"}
-          to={"https://github.com/estidlore?tab=repositories"}
-        >
-          {t().repositories}
-        </Link>
-      </p>
+      <Link
+        className={"col-span-2 mr-2"}
+        to={"https://github.com/estidlore?tab=repositories"}
+      >
+        {t().repositories}
+      </Link>
     </Section>
   );
 };

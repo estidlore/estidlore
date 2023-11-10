@@ -33,8 +33,7 @@ const projects: IProject[] = [
 ];
 
 const ENG = {
-  more: "Do you want to discover my other projects?",
-  repositories: "Visit my repositories",
+  repositories: "Discover more projects",
   title: "Projects",
 };
 
