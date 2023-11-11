@@ -2,8 +2,9 @@ import { Language } from "utils/contexts";
 
 const { entries, useTranslation } = Language.translation({
   ENG: {
-    resume: "View my resume",
-    title: "Contact",
+    email: "Send email",
+    github: "View Github profile",
+    linkedin: "View Linkedin profile",
   },
 });
 

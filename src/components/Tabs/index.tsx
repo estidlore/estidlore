@@ -1,10 +1,9 @@
-import "./styles.css";
-
 import React, { useState } from "react";
 
+import "./styles.css";
 import type { TabsProps } from "./types";
 
-const Tabs = <T, >({
+const Tabs = <T,>({
   data,
   getTabName,
   render: Tab,

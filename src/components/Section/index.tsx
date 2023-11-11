@@ -1,7 +1,6 @@
-import "./styles.css";
-
 import React from "react";
 
+import "./styles.css";
 import type { ISectionProps } from "./types";
 
 const Section = ({

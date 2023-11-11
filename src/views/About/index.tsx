@@ -1,6 +1,7 @@
+import { faChessPawn, faChessQueen } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-import { imgs } from "assets/imgs";
+import { Icon } from "components/Icon";
 import { Section } from "components/Section";
 
 import { t } from "./lang";
@@ -12,19 +13,17 @@ const About = (): JSX.Element => {
     <Section id={"about"} title={t().title}>
       <p className={"text-2xl text-center"}>{t().profile}</p>
       <div className={`flex group justify-center mt-12 relative ${cssChess}`}>
-        <img
-          alt={"Chess pawn"}
+        <Icon
           className={"group-hover:opacity-0"}
-          height={128}
-          src={imgs.pawn}
-          width={128}
+          icon={faChessPawn}
+          size={"8x"}
+          title={"Chess pawn"}
         />
-        <img
-          alt={"Chess queen"}
+        <Icon
           className={"absolute opacity-0 group-hover:opacity-100"}
-          height={128}
-          src={imgs.queen}
-          width={128}
+          icon={faChessQueen}
+          size={"8x"}
+          title={"Chess queen"}
         />
       </div>
     </Section>

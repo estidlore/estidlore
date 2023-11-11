@@ -1,5 +1,3 @@
-import "./styles.css";
-
 import React, { useCallback, useRef } from "react";
 
 import { imgs } from "assets/imgs";
@@ -8,6 +6,7 @@ import { Language } from "utils/contexts";
 import { useParallax } from "utils/hooks/useParallax";
 
 import { useTranslation } from "./lang";
+import "./styles.css";
 
 const Header = (): JSX.Element => {
   const lang = Language.useLanguage();

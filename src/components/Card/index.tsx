@@ -1,7 +1,6 @@
-import "./styles.css";
-
 import React from "react";
 
+import "./styles.css";
 import type { ICardProps } from "./types";
 
 const Card = ({ children, className = "", title }: ICardProps): JSX.Element => {

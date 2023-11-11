@@ -1,5 +1,5 @@
 .Link {
-  @apply duration-300 p-2 rounded transition underline;
+  @apply duration-300 leading-none p-2 rounded transition underline;
 }
 
 .Link:hover {

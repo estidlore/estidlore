@@ -1,7 +1,6 @@
-import "./styles.css";
-
 import React from "react";
 
+import "./styles.css";
 import type { Star, StarsProps } from "./types";
 
 const randomColor = (): string => {

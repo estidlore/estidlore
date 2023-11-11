@@ -1,7 +1,8 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 
-import { imgs } from "assets/imgs";
 import { Card } from "components/Card";
+import { Icon } from "components/Icon";
 import { Link } from "components/Link";
 import { Section } from "components/Section";
 import { Tags } from "components/Tags";
@@ -25,13 +26,7 @@ const Projects = (): JSX.Element => {
                 {el.name}
                 {el.link ? (
                   <Link className={"float-right"} to={el.link}>
-                    <img
-                      alt={"Visit GitHub repository"}
-                      className={"brightness-0 invert"}
-                      height={16}
-                      src={imgs.github}
-                      width={16}
-                    />
+                    <Icon icon={faGithub} title={"View code"} />
                   </Link>
                 ) : undefined}
               </>
