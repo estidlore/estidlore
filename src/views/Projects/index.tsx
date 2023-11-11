@@ -1,4 +1,5 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 import { Card } from "components/Card";
@@ -24,11 +25,19 @@ const Projects = (): JSX.Element => {
             title={
               <>
                 {el.name}
-                {el.link ? (
-                  <Link className={"float-right"} to={el.link}>
+                <div className={"flex float-right"}>
+                  {el.link ? (
+                    <Link to={el.link}>
+                      <Icon
+                        icon={faArrowUpRightFromSquare}
+                        title={"View project"}
+                      />
+                    </Link>
+                  ) : null}
+                  <Link to={el.repository}>
                     <Icon icon={faGithub} title={"View code"} />
                   </Link>
-                ) : undefined}
+                </div>
               </>
             }
           >
