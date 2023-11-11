@@ -5,7 +5,7 @@ import { createUseContext } from "ruxi";
 describe("utils/contexts", () => {
   describe("createUseContext", () => {
     const NumContext = createContext<number | null>(null);
-    const useNum = createUseContext(NumContext);
+    const useNum = createUseContext(NumContext, "Num");
     const NumDemo = (): JSX.Element => <p>{useNum()}</p>;
 
     it("Return context value", () => {
@@ -27,7 +27,7 @@ describe("utils/contexts", () => {
 
       expect(() => {
         render(<NumDemo />);
-      }).toThrow("Context provider not found");
+      }).toThrow("NumProvider not found");
       expect(consoleError).toHaveBeenCalled();
       consoleError.mockRestore();
     });
