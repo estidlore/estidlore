@@ -15,16 +15,19 @@ const useMousePosition = (
   const handleMouseMove = useCallback(
     (ev: MouseEvent) => {
       const newPos = { x: ev.clientX - origin.x, y: ev.clientY - origin.y };
-      const distance = getDistance(position, newPos);
-      if (distance > 10) {
-        setPosition(newPos);
-      }
+      setPosition((position) => {
+        const distance = getDistance(position, newPos);
+        return distance > 10 ? newPos : position;
+      });
     },
-    [origin.x, origin.y, position],
+    [origin.x, origin.y],
   );
 
   useEffect(() => {
-    const el = ref.current ?? document.body;
+    const el = ref.current;
+    if (el === null) {
+      return;
+    }
     el.addEventListener("mousemove", handleMouseMove);
     return (): void => {
       el.removeEventListener("mousemove", handleMouseMove);

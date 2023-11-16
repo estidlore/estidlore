@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 
 import type { Point } from "utils/types";
 
@@ -19,7 +19,7 @@ const useParallax = (
   ref: React.RefObject<HTMLElement>,
 ): ((distance: number) => Point) => {
   const rect = useRect(ref);
-  const origin = getCenter(rect);
+  const origin = useMemo(() => getCenter(rect), [rect]);
   const mousePos = useMousePosition(ref, origin);
 
   return useCallback(

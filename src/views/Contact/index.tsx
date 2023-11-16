@@ -13,7 +13,7 @@ const Contact = (): JSX.Element => {
   return (
     <div
       className={
-        "backdrop-blur fixed flex flex-col left-2 top-1/2 -translate-y-1/2"
+        "backdrop-blur fixed flex flex-col left-2 rounded top-1/2 -translate-y-1/2"
       }
     >
       <Link to={"mailto:estidlore@outlook.com"}>
