@@ -3,6 +3,21 @@ import type { IProject } from "./types";
 const projects: IProject[] = [
   {
     description:
+      "Web with my own maze generation algorithm, shown step by step and " +
+      "shaped according to screen size",
+    link: "https://estidlore.github.io/maze-web",
+    name: "Maze generator",
+    repository: "https://github.com/estidlore/maze-web",
+    skills: [
+      "Algorithms",
+      "Canvas",
+      "Optimization",
+      "Problem-solving",
+      "Typescript",
+    ],
+  },
+  {
+    description:
       "open-source library for JS and TS  with common utilities " +
       "for needs such as arrays, math, objects and time",
     link: "https://www.npmjs.com/package/litus",
@@ -24,14 +39,6 @@ const projects: IProject[] = [
     name: "CV",
     repository: "https://github.com/estidlore/CV",
     skills: ["JsPDF", "React", "SASS", "Typescript"],
-  },
-  {
-    description:
-      "SASS Npm module with many powerful UI/UX utils with smooth " +
-      "numeric values changes and concise selectors",
-    name: "Bonbon",
-    repository: "https://github.com/estidlore/bonbon",
-    skills: ["React", "SASS", "Typescript", "UI/UX"],
   },
   {
     description:
