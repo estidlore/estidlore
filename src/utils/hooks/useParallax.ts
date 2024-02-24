@@ -11,7 +11,7 @@ const getCenter = (rect?: DOMRect): Point => {
   }
   return {
     x: (rect.left + rect.right) / 2,
-    y: (rect.top + rect.bottom) / 2,
+    y: (rect.top + rect.bottom) / 2 + window.scrollY,
   };
 };
 

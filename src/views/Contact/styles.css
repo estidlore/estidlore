@@ -3,5 +3,5 @@
 }
 
 #contact > .Link {
-  @apply hover:-mr-4 hover:pl-4;
+  @apply hover:-mr-4 hover:pl-4 text-right;
 }
