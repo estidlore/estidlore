@@ -5,7 +5,7 @@ import type { Star, StarsProps } from "./types";
 
 const randomColor = (): string => {
   const channels = Array.from(Array(3)).map(
-    () => Math.floor(Math.random() * 32) + 192,
+    () => Math.floor(Math.random() * 64) + 96,
   );
   return `rgb(${channels.join(",")})`;
 };

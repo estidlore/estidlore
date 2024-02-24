@@ -6,16 +6,13 @@ import { Icon } from "components/Icon";
 import { Link } from "components/Link";
 
 import { useTranslation } from "./lang";
+import "./styles.css";
 
 const Contact = (): JSX.Element => {
   const t = useTranslation();
 
   return (
-    <div
-      className={
-        "backdrop-blur fixed flex flex-col left-2 rounded top-1/2 -translate-y-1/2"
-      }
-    >
+    <div id={"contact"}>
       <Link to={"mailto:estidlore@outlook.com"}>
         <Icon size={"2x"} icon={faEnvelope} title={t.email} />
       </Link>

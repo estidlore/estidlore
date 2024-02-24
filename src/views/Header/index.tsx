@@ -54,7 +54,7 @@ const Header = (): JSX.Element => {
         {t.introduction}
       </p>
       <p
-        className={"text-3xl mb-0"}
+        className={"mb-0 text-3xl text-center"}
         style={{
           translate: parallax(7).toString(),
         }}

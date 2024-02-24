@@ -43,6 +43,7 @@ const projects: IProject[] = [
   {
     description:
       "Jam's 2nd place 3D game about escaping from a 3D generated maze",
+    link: "https://estidlore.itch.io/freedom-walls",
     name: "Freedom Walls",
     repository: "https://github.com/estidlore/Freedom-Walls",
     skills: ["Algorithms", "C#", "Data Structures", "Optimization", "Unity"],

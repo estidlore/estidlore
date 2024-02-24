@@ -1,0 +1,7 @@
+#contact {
+  @apply backdrop-blur fixed flex flex-col left-2 rounded top-1/2 -translate-y-1/2;
+}
+
+#contact > .Link {
+  @apply hover:-mr-4 hover:pl-4;
+}

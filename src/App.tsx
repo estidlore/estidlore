@@ -8,7 +8,7 @@ import { Projects } from "views/Projects";
 import { Work } from "views/Work";
 
 const App = (): JSX.Element => (
-  <div className={"bg-gray-900 text-gray-100 px-2"}>
+  <div className={"bg-gray-900 text-gray-100 px-4"}>
     <Language.Provider>
       <Header />
       <About />
